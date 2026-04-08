@@ -7,14 +7,29 @@ object pepe {
 	var bonoResultado = bonoNulo
 	var cantidadDeFaltas = 0
 	
-	method cantidadDeFaltas() { return cantidadDeFaltas }
-	
+	method cantidadDeFaltas() {
+		return cantidadDeFaltas 
+	}
+	method categoria(_categoria){
+		categoria = _categoria
+	}
+	method bonoPresentismo(_bonoPresentismo){
+		bonoPresentismo = _bonoPresentismo
+	}
+	method bonoResultado(_bonoResultado){
+		bonoResultado = _bonoResultado
+	}
+	method cantidadDeFaltas(_cantidadDeFaltas){
+		cantidadDeFaltas = _cantidadDeFaltas
+	}
 	// faltan los métodos para poder cambiar la categoria, el bono por presentismo,
 	// el bono por resultados y la cantidad de faltas de Pepe. 
 	
-	method sueldoNeto() { return categoria.neto() }
+	method sueldoNeto() {
+		return categoria.neto() 
+	}
 	method sueldo() {
-		return self.sueldoNeto() 
+		return self.sueldoNeto() + bonoResultado.monto(self) + bonoPresentismo.monto(self)
 			/* + el bono por presentismo */
 			/* + el bono por resultado */
 		
