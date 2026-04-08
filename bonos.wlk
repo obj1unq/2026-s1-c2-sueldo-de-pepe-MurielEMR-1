@@ -34,7 +34,7 @@ object bonoPresentismoAjuste{
 		}else{
 			0
 		}
-	}
+	}dasda
 		}
 object bonoPresentismoDemagogico{
 	method monto(empleado){
