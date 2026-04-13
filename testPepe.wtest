@@ -1,20 +1,58 @@
 import pepe.*
 import bonos.*
 import categorias.*
+import sofia.*
+import roque.*
+import ernest.*
 
 describe "sueldo pepe" {
+
 	test "Test inicial 1" {
 		/* esta parte está comentada porque falta agregar los métodos
 		 * correspondientes en el objeto pepe. 
 		 * Descomentar las cuatro líneas que siguen para que el test funcione correctamente. 
 		 */
-//		pepe.setCategoria(cadete)
-//		pepe.setBonoResultado(bonoMontoFijo)
-//		pepe.setBonoPresentismo(bonoPresentismoNormal)
-//		pepe.setCantidadDeFaltas(3)
+		pepe.setCategoria(cadete)
+		pepe.setBonoResultado(bonoMontoFijo)
+		pepe.setBonoPresentismo(bonoPresentismoNormal)
+		pepe.setCantidadDeFaltas(3)
 		
 		assert.equals(20000 + 800 + 0, pepe.sueldo())
 	}
 
+	test "test Inicial 2"{
+		pepe.setCategoria(gerente)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoNulo)
+	}
+
+	test "test inicial 3"{
+		pepe.setCategoria(cadete)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoPresentismoNormal)
+		pepe.setCantidadDeFaltas(0)
+	}
 	
+
 }
+
+	test "test inicial 4"{
+		pepe.setCategoria(cadete)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoPresentismoNormal)
+		pepe.setCantidadDeFaltas(0)
+	}
+
+	test "test complicado"{
+		assert.equals(cadete, medioTiempo.categoria())
+		pepe.setCategoria(medioTiempo)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoPresentismoDemagogico)
+		pepe.setCantidadDeFaltas(1)
+		roque.setBonoResultado(bonoMontoFijo)
+		ernesto.setCompañero(pepe)
+		ernesto.setBonoPresentismo(bonoPresentismoAjuste)
+		assert.equals(11500,pepe.sueldo())
+		assert.equals(37800,roque.sueldo())
+		assert.equals(10100,ernesto.sueldo())
+	}
