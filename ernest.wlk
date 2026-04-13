@@ -24,7 +24,4 @@ object ernesto {
     method setBonoPresentismo(_bonoPresentismo){
         bonoPresentismo= _bonoPresentismo
     }
-    method presentismo(){
-        
-    }
 }
