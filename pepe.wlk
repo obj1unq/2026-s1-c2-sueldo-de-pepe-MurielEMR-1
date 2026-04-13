@@ -32,16 +32,3 @@ object pepe { //arranco preguntandole el sueldo
 	
 }
 
-object sofia{
-	var bonoResultado = bonoNulo
-	method sueldo(){
-
-		return sueldoNeto() + bonoResultado
-
-	}
-	method sueldoNeto(){
-
-		return categoria.neto() * 1.3
-	}
-
-}

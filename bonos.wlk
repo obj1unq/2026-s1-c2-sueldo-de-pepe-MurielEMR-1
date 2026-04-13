@@ -29,7 +29,7 @@ object bonoPresentismoNormal {
 }
 object bonoPresentismoAjuste{
 	method monto(empleado){
-		return if (empleado.presentismo() == 0){
+		return if (empleado.cantidadDeFaltas() == 0){
 			100
 		}else{
 			0

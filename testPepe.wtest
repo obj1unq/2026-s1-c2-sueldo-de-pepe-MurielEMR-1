@@ -1,6 +1,9 @@
 import pepe.*
 import bonos.*
 import categorias.*
+import sofia.*
+import roque.*
+import ernest.*
 
 describe "sueldo pepe" {
 
@@ -40,4 +43,16 @@ describe "sueldo pepe" {
 		pepe.setCantidadDeFaltas(0)
 	}
 
-	
+	test "test complicado"{
+		assert.equals(cadete, medioTiempo.categoria())
+		pepe.setCategoria(medioTiempo)
+		pepe.setBonoResultado(bonoPorcentaje)
+		pepe.setBonoPresentismo(bonoPresentismoDemagogico)
+		pepe.setCantidadDeFaltas(1)
+		roque.setBonoResultado(bonoMontoFijo)
+		ernesto.setCompañero(pepe)
+		ernesto.setBonoPresentismo(bonoPresentismoAjuste)
+		assert.equals(11500,pepe.sueldo())
+		assert.equals(37800,roque.sueldo())
+		assert.equals(10100,ernesto.sueldo())
+	}

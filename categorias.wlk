@@ -30,7 +30,10 @@ object vendedor{
 }
 object medioTiempo{
 	var categoria = cadete
-	method categoriaBase(_categoria){
+	method categoria(){
+		return categoria
+	}
+	method setCategoria(_categoria){
 		categoria = _categoria
 	}
 	method neto(){
